@@ -1,0 +1,45 @@
+package dataStructures;
+
+public class LinkedList {
+	private Node head;
+	private int listCount;
+	
+	public LinkedList(){
+		head = null;
+		listCount = 0;
+	}
+	
+	public void add(Object data){
+		Node newNode = new Node(data);
+		newNode.setNext(head);
+		head = newNode;
+		listCount++;
+	}
+	
+	public boolean remove(Object data){
+		boolean success = false;
+		Node toCheck = head;
+		while(toCheck!=null && !success){
+			if(data.equals(toCheck.getData())){
+				
+			}
+		}
+		
+		return success
+	}
+	
+	private Node getPredecessor(Object data){
+		if(head == null){
+			return null;
+		}
+		else{
+			
+		}
+	}
+	
+	
+	public int getSize(){
+		return listCount;
+	}
+	
+}

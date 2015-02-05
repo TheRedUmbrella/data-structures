@@ -47,10 +47,6 @@ public class LinkedList {
 					pred = toCheck;
 					success = true;
 				}
-				else{
-					toCheck = next;
-					next = toCheck.getNext();
-				}
 			}
 		}
 		return pred;

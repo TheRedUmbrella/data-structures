@@ -49,7 +49,6 @@ public class LinkedList {
 				}
 				else{
 					toCheck = next;
-					next = toCheck.getNext();
 				}
 			}
 		}

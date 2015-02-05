@@ -11,7 +11,7 @@ public class TesterClass {
 		a.add(34);
 		a.add(false);
 		a.add(5);
-		a.remove(false);
+		a.remove(5);
 		System.out.println("Hey there.  It's been so long: "+a.getSize());
 
 	}

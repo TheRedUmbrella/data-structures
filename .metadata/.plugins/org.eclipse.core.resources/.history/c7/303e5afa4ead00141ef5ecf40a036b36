@@ -10,8 +10,6 @@ public class TesterClass {
 		LinkedList a = new LinkedList();
 		a.add(34);
 		a.add(false);
-		a.add(5);
-		a.remove(false);
 		System.out.println("Hey there.  It's been so long: "+a.getSize());
 
 	}
