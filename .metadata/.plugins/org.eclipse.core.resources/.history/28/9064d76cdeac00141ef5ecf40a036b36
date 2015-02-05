@@ -1,0 +1,23 @@
+package dataStructures;
+
+public class LinkedList {
+	private Node head;
+	private int listCount;
+	
+	public LinkedList(){
+		head = null;
+		listCount = 0;
+	}
+	
+	public LinkedList search(Object toFind){
+		if(head == null){
+			return this; 
+		}
+		
+	}
+	
+	public int getSize(){
+		return listCount;
+	}
+	
+}

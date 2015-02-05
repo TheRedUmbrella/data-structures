@@ -9,8 +9,7 @@ public class TesterClass {
 		// TODO Auto-generated method stub
 		LinkedList a = new LinkedList();
 		a.add(34);
-		a.add(false);
-		System.out.println("Hey there.  It's been so long: "+a.getSize());
+		System.out.println("Hey there.  It's been so long: "+a);
 
 	}
 

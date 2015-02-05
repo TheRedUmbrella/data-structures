@@ -1,0 +1,15 @@
+package dataStructures;
+
+public class LinkedList {
+	private Node head;
+	private int count;
+	
+	public LinkedList(){
+		a = 3;
+	}
+	
+	public int getA(){
+		return a;
+	}
+	
+}

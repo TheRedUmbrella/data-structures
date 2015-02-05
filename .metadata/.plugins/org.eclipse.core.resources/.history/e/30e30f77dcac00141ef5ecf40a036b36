@@ -1,0 +1,14 @@
+package dataStructures;
+
+public class LinkedList {
+	private int a;
+	
+	public LinkedList(){
+		a = 3;
+	}
+	
+	public int getA(){
+		return a;
+	}
+	
+}
