@@ -1,0 +1,28 @@
+package dataStructures;
+
+public class BinaryTree {
+	private Node root;
+	
+	public BinaryTree(){
+		root = null;
+	}
+	
+	public Comparable searchTree
+	
+	
+	
+	private class Node{
+		private Comparable data;
+		private Node left;
+		private Node right;
+		private Node parent;
+		
+		public Node(Comparable element){
+			data = element;
+			left = null;
+			right = null;
+			parent = null;
+		}
+	}
+
+}
