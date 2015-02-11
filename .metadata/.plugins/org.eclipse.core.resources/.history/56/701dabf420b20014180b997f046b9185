@@ -25,7 +25,7 @@ public class LinkedList {
 				success = true;
 			}
 			else{
-				Node pred = getPredecessor(head, data);
+				Node pred = getPredecessor(data);
 				if(pred != null){
 					pred.setNext(pred.getNext().getNext());
 					success = true;
@@ -36,20 +36,24 @@ public class LinkedList {
 		return success;
 	}
 	
-	private Node getPredecessor(Node top,Object data){
-		if(top != null){
-			Node next = top.getNext();
-			if(next.getData().equals(data)){
-				return top;
-			}
-			else{
-				return getPredecessor(next, data);
+	private Node getPredecessor(Object data){
+		Node pred = null;
+		if(head != null){
+			Node toCheck = head;
+			boolean success = false;
+			Node next = toCheck.getNext();
+			while(next!=null && !success){
+				if(next.getData().equals(data)){
+					pred = toCheck;
+					success = true;
+				}
+				else{
+					toCheck = next;
+					next = toCheck.getNext();
+				}
 			}
 		}
-		else{
-			return null;
-			
-		}
+		return pred;
 	}
 	
 	public int getSize(){
@@ -68,11 +72,9 @@ public class LinkedList {
 		public Object getData(){
 			return data;
 		}
-		
-		/*
 		public void setData(Object dataValue){
 			data = dataValue;
-		}*/
+		}
 		
 		public Node getNext(){
 			return next;
