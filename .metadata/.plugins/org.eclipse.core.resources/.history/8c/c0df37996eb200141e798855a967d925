@@ -13,7 +13,6 @@ public class TesterClass {
 		a.add(79);
 		a.add(26);
 		a.add(131);
-		a.add(79);
 
 	}
 

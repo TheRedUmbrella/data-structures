@@ -13,35 +13,13 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 			return true;
 		}
 		else{
-			return add(item, root);
+			return add(item, null, root);
 		}
 	}
 	
-	private boolean add(T item, Node parent){
-		T parentItem = parent.getData();
-		if(item.compareTo(parentItem)<0){
-			Node leftNode = parent.getLeft();
-			if(leftNode==null){
-				parent.setLeft(new Node(item, parent));
-				return true;
-			}
-			else{
-				return add(item, leftNode);
-			}
-		}
-		else if(item.compareTo(parentItem)>0){
-			Node rightNode = parent.getRight();
-			if(rightNode==null){
-				parent.setRight(new Node(item, parent));
-				return true;
-			}
-			else{
-				return add(item, rightNode);
-			}
-		}
-		else{
-			return false;
-		}
+	private boolean add(T item, Node parent, Node subTree){
+		subTree = new Node(item);
+		return true;
 	}
 	
 	public T searchTree(T item){
@@ -78,20 +56,12 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 		private Node right;
 		private Node parent;
 		
-		public Node(T data){
-			this.data = data;
+		public Node(T element){
+			data = element;
 			left = null;
 			right = null;
 			parent = null;
 		}
-		
-		public Node(T data, Node parent){
-			this.data = data;
-			left = null;
-			right = null;
-			this.parent = parent;
-		}
-		
 		
 		public T getData(){
 			return data;
@@ -104,19 +74,6 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
 		public Node getRight(){
 			return right;
 		}
-		
-		public void setLeft(Node left){
-			this.left = left;
-		}
-		
-		public void setRight(Node right){
-			this.right = right;
-		}
-		
-		public void setParent(Node parent){
-			this.parent = parent;
-		}
-		
 	}
 
 }
